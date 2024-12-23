@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fean Restaurant</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendors/all.min.css') }}" />
+  <!-- Main-file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- Start Navbar -->
+  <nav class="main-navbar-about">
+    <div class="container">
+      <div class="navbar-wrap">
+        <div class="logo">
+          <a href="{{ url_for('index') }}">Feane</a>
+        </div>
+        <div class="navbar-content">
+          <ul class="navbar-list">
+            <li>
+              <a href="index">Home</a>
+            </li>
+            <li>
+              <a href="menu">Menu</a>
+            </li>
+            <li>
+              <a href="about" class="active">About</a>
+            </li>
+            <li>
+              <a href="book">Book Table</a>
+            </li>
+          </ul>
+          <div class="navbar-icons">
+            <a href="#" class="navbar-link">
+              <i class="fa fa-user"></i>
+            </a>
+            <a href="#" class="navbar-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="navbar-link">
+              <i class="fa fa-search"></i>
+            </button>
+            <button class="main-btn" onclick="location.href='{{ url_for('menu') }}'">Order Online</button>
+          </div>
+        </div>
+        <span class="bars">
+          <i class="fa fa-bars"></i>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start About Section -->
+  <section class="about-bage">
+    <div class="about-res">
+      <h3 class="about-h">About</h3>
+      <p>
+        Our site is a fast food restaurant site that is prepared to its fullest. Because your comfort is important to us, we have created a site for you <br> commodo vestibulum. Non purus ornare nisi in. Lectus nisi mauris justo orci id erat. Libero urna at sapien nulla.
+        You can also reserve your food and choose from many of the meals available with us.  <br> Also, our site always offers the highest discounts among all the sites. You may fear our site. This is the best choice for you
+      </p>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Start Footer -->
+  <footer>
+    <div class="container padding-y">
+      <div class="footer">
+        <div class="footer-contact">
+          <h1>Contact Us</h1>
+          <p><i class="fa-solid fa-location-dot"></i> Location</p>
+          <p><i class="fa-solid fa-phone"></i> Call +1234567890</p>
+          <p> <i class="fa-solid fa-envelope"></i> restaurant@gmail.com</p>
+        </div>
+        <div>
+          <h1>Feane</h1>
+          <p>Necessary, making this the first true generator
+            <br> on the Internet. It uses a dictionary of over 200
+            <br> Latin words, combined with</p>
+            <div class="icons">
+              <div><i class="fa-brands fa-facebook-f"></i></div>
+              <div><i class="fa-brands fa-twitter"></i></div>
+              <div><i class="fa-brands fa-linkedin-in"></i></div>
+              <div><i class="fa-brands fa-instagram"></i></div>
+              <div><i class="fa-brands fa-playstation"></i></div>
+            </div>
+        </div>
+        <div class="aaa">
+          <h1>Opening Hours</h1>
+          <p>Opening Hours</p>
+          <p>10:00 AM - 10:00 PM</p>
+        </div>
+      </div>
+      <div class="copy-right padding-y">
+        © 2023 All Rights Reserved By Free Html Templates
+      </div>
+      <div class="copy-right">
+        © Distributed By ThemeWagon
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>
