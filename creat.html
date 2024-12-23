@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fean Restaurant</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendors/all.min.css') }}" />
+  <!-- Main-file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- Start Navbar -->
+  <nav class="main-navbar-creat">
+    <div class="container">
+      <div class="navbar-wrap-creat">
+        <div class="logo-creat">
+          <a href="#">Feane</a>
+        </div>
+        <div class="navbar-content-creat">
+          <ul class="navbar-list-creat">
+            <li><a href="index">Home</a></li>
+            <li><a href="menu">Menu</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="book">Book Table</a></li>
+          </ul>
+        </div>
+        <span class="bars-creat">
+          <i class="fa fa-bars-creat"></i>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Create Order -->
+  <section class="section-creat">
+    <div class="creat1">
+      <div class="creat-order1">
+        <div>
+          <div class="form-creat">
+            <h3 class="creat-o">Create Order</h3>
+            <form method="POST">
+              <br>
+              <label class="labels">Number Of Orders</label><br>
+              <input type="number" class="inputs-creat" id="quantity" name="quantity" placeholder="Enter Quantity" min="1" step="1"><br><br>
+              <label class="labels">Address</label><br>
+              <input type="text" class="inputs-creat" name="address" placeholder="Enter Address"><br><br>
+              <label class="labels">Total Price</label><br>
+              <input type="text" class="inputs-creat" id="result" value="{{ total_price if total_price else '' }}" readonly><br><br>
+              <div class="bii">
+              
+                <input type="button" class="order-now" value="Order Now">
+              </div>
+            </form>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Create Order -->
+
+  <!-- Start Footer -->
+  <footer>
+    <div class="container padding-y">
+      <div class="footer">
+        <div class="footer-contact">
+          <h1>Contact Us</h1>
+          <p><i class="fa-solid fa-location-dot"></i> Location</p>
+          <p><i class="fa-solid fa-phone"></i> Call +1234567890</p>
+          <p><i class="fa-solid fa-envelope"></i> restaurant@gmail.com</p>
+        </div>
+        <div>
+          <h1>Feane</h1>
+          <p>Necessary, making this the first true generator
+            <br> on the Internet. It uses a dictionary of over 200
+            <br> Latin words, combined with</p>
+          <div class="icons">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-twitter"></i></div>
+            <div><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>
+            <div><i class="fa-brands fa-playstation"></i></div>
+          </div>
+        </div>
+        <div class="aaa">
+          <h1>Opening Hours</h1>
+          <p>10:00 AM - 10:00 PM</p>
+        </div>
+      </div>
+      <div class="copy-right padding-y">
+        © 2023 All Rights Reserved By Free Html Templates
+      </div>
+      <div class="copy-right">
+        © Distributed By ThemeWagon
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+
+</html>

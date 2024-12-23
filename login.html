@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fean Restaurant</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendors/all.min.css') }}" />
+  <!-- Main-file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+<div class="login1">
+    <div class="section1">
+        <h3 class="wellcome">Welcome Back</h3>
+        <p class="login-dis">Login to stay updated with the latest offers. Don’t miss the opportunity.</p>
+    </div>
+    <div>
+        <div class="form-login">
+            <form method="POST" action="{{ url_for('login') }}">
+                <br>
+                <label class="labels-login">E-mail</label><br>
+                <input type="text" name="username" placeholder="Username" required>
+                <br>
+                <label class="labels-login">Password</label><br>
+                <input type="password" name="password" placeholder="Password" required>
+                <br>
+                <!-- Error Message -->
+                {% if error %}
+                <div style="color: red;">{{ error }}</div>
+                {% endif %}
+                <button class="button-login" type="submit">Login</button>
+            </form>
+        </div>
+        <br>
+        <div class="kk">
+            <p class="forget-login"><a href="#">Forgot your password?</a></p>
+            <p class="go-signup">Don’t have an account? <a href="{{ url_for('signup') }}">Signup</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fean Restaurant</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendors/all.min.css') }}" />
+  <!-- Main-file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <div class="signup">
+        <div class="creat-account">
+            <h3 class="creat">Create Account</h3>
+            <p class="creat-dis">Create an account to be able to enjoy our restaurant</p>
+        </div>
+        <div class="form-signup">
+        
+            <form method="POST" action="{{ url_for('signup') }}">
+                <div class="name">
+                    <div class="first">
+                        <label class="labels">user name</label><br>
+                        <input type="text" class="input1-signup" name="username" required>
+                    </div>
+             
+                    </div>
+                </div>
+                <div>
+                    
+                    <label class="labels">Password</label><br>
+                    <input type="password" class="input2-signup" name="password" required><br>
+
+                    
+                    <!-- Error Message -->
+                    {% if error %}
+                    <div style="color: red;">{{ error }}</div>
+                    {% endif %}
+
+                    <button class="button-signup" type="submit">Sign up</button>
+                </div>
+            </form>
+            
+            <br>
+            <div class="go-login">
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
